@@ -135,4 +135,4 @@ Setiap jurnal terhubung ke satu pengguna melalui `user_id`. Saat akun dihapus, k
 
 ## Lisensi
 
-Proyek ini menggunakan lisensi MIT.
+Proyek ini dibuat oleh Raditya Rai Zeeshan menggunakan lisensi MIT.
