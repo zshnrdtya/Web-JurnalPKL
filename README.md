@@ -26,8 +26,6 @@ Aplikasi web untuk mencatat kegiatan harian selama Praktik Kerja Lapangan (PKL).
 
 ## Prasyarat
 
-Pastikan perangkat sudah memiliki:
-
 - PHP 8.3 atau lebih baru
 - Composer
 - Node.js dan npm
@@ -35,7 +33,7 @@ Pastikan perangkat sudah memiliki:
 
 ## Instalasi
 
-1. Masuk ke folder proyek, lalu pasang dependensi PHP dan JavaScript.
+1. Pasang dependensi.
 
    ```bash
    composer install
@@ -57,15 +55,7 @@ Pastikan perangkat sudah memiliki:
    php artisan migrate
    ```
 
-4. (Opsional) Buat data pengguna contoh dari seeder.
-
-   ```bash
-   php artisan db:seed
-   ```
-
-   Seeder membuat pengguna dengan email `test@example.com` untuk kebutuhan pengembangan.
-
-5. Jalankan aplikasi dan Vite pada dua terminal berbeda.
+4. Jalankan aplikasi dan Vite pada dua terminal berbeda.
 
    ```bash
    php artisan serve
