@@ -4,7 +4,7 @@
 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-5">
     <h1 class="text-xl font-bold text-gray-800">Riwayat Kegiatan</h1>
     <div class="flex gap-2 w-full sm:w-auto">
-        <a href="{{ route('kegiatan.create') }}" class="flex-1 sm:flex-none text-center bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700">
+        <a href="{{ route('kegiatan.create') }}" class="btn-primary flex-1 sm:flex-none text-center text-white px-4 py-2 rounded-lg text-sm font-medium">
             + Tambah
         </a>
         <a href="{{ route('kegiatan.export.pdf') }}" class="flex-1 sm:flex-none text-center bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-700">
@@ -14,7 +14,7 @@
 </div>
 
 <!-- Form Filter -->
-<form method="GET" action="{{ route('kegiatan.index') }}" class="bg-white rounded-xl shadow-sm border p-4 mb-5">
+<form method="GET" action="{{ route('kegiatan.index') }}" class="glass-card p-4 mb-5">
     <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
         <div>
             <label class="block mb-1 text-xs font-medium text-gray-600">Dari Tanggal</label>
@@ -33,11 +33,11 @@
         </div>
     </div>
     <div class="flex gap-2 mt-3">
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700">
+        <button type="submit" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">
             Filter
         </button>
         @if(request('dari') || request('sampai') || request('cari'))
-            <a href="{{ route('kegiatan.index') }}" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200">
+            <a href="{{ route('kegiatan.index') }}" class="btn-secondary text-gray-700 px-4 py-2 rounded-lg text-sm font-medium">
                 Reset
             </a>
         @endif
@@ -45,7 +45,7 @@
 </form>
 
 @forelse($kegiatans as $k)
-    <div class="bg-white rounded-xl shadow-sm border p-4 mb-3">
+    <div class="glass-card p-4 mb-3">
         <div class="flex justify-between items-start gap-3">
             <div class="flex-1">
                 <p class="text-xs text-gray-500">
@@ -68,7 +68,7 @@
         </div>
     </div>
 @empty
-    <div class="bg-white rounded-xl shadow-sm border p-8 text-center text-gray-400 text-sm">
+    <div class="glass-card p-8 text-center text-gray-500 text-sm">
         Tidak ada kegiatan yang cocok dengan filter kamu.
     </div>
 @endforelse

@@ -50,7 +50,7 @@
         </div>
 
         <button type="submit"
-            class="w-full bg-blue-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
+            class="btn-primary w-full text-white py-2.5 rounded-lg text-sm font-medium transition">
             Daftar
         </button>
     </form>

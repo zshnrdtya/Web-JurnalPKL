@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html { min-height: 100%; }
+
+    body {
+        min-height: 100vh;
+        color: #172554;
+        background:
+            radial-gradient(circle at 10% 10%, rgba(186, 230, 253, .85), transparent 30rem),
+            radial-gradient(circle at 90% 18%, rgba(199, 210, 254, .8), transparent 28rem),
+            linear-gradient(135deg, #eff6ff 0%, #eef2ff 48%, #f8fafc 100%);
+        background-attachment: fixed;
+    }
+
+    input:not([type='checkbox']):not([type='radio']), textarea, select {
+        border: 1px solid rgba(148, 163, 184, .38) !important;
+        background: rgba(255, 255, 255, .68) !important;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75);
+        transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    input:not([type='checkbox']):not([type='radio']):focus, textarea:focus, select:focus {
+        border-color: rgba(79, 70, 229, .7) !important;
+        background: rgba(255, 255, 255, .9) !important;
+        box-shadow: 0 0 0 4px rgba(99, 102, 241, .14) !important;
+    }
+}
+
+@layer components {
+    .glass-nav {
+        background: rgba(255, 255, 255, .64);
+        border-bottom: 1px solid rgba(255, 255, 255, .75);
+        box-shadow: 0 10px 30px rgba(30, 41, 59, .08);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+    }
+
+    .glass-card, .glass-panel {
+        background: rgba(255, 255, 255, .62) !important;
+        border: 1px solid rgba(255, 255, 255, .8) !important;
+        box-shadow: 0 14px 36px rgba(30, 41, 59, .10), inset 0 1px 0 rgba(255, 255, 255, .72);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+    }
+
+    .glass-card { border-radius: 1rem; }
+    .glass-panel { border-radius: 1.25rem; padding: 1.5rem; }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #2563eb, #4f46e5) !important;
+        box-shadow: 0 8px 18px rgba(79, 70, 229, .22);
+        transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+    }
+
+    .btn-primary:hover {
+        filter: brightness(1.06);
+        box-shadow: 0 12px 22px rgba(79, 70, 229, .28);
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: rgba(255, 255, 255, .58) !important;
+        border: 1px solid rgba(148, 163, 184, .25);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8);
+    }
+
+    .status-warning, .status-success {
+        border-radius: .9rem;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}

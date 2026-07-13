@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title ?? 'Jurnal PKL' }}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-gray-50 min-h-screen" x-data="{ mobileMenuOpen: false }">
+<body class="min-h-screen" x-data="{ mobileMenuOpen: false }">
 
     <!-- Navbar -->
-    <nav class="bg-white border-b shadow-sm sticky top-0 z-50">
+    <nav class="glass-nav sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
-                <a href="{{ route('dashboard') }}" class="font-bold text-lg text-blue-700">
+                <a href="{{ route('dashboard') }}" class="font-bold text-lg text-indigo-700 tracking-tight">
                     📘 Jurnal PKL
                 </a>
 
@@ -63,7 +63,7 @@
     <!-- Konten -->
     <main class="max-w-5xl mx-auto px-4 py-6">
         @if(session('success'))
-            <div class="bg-green-100 text-green-700 px-4 py-3 rounded-lg mb-4 text-sm">
+            <div class="status-success bg-emerald-100/70 border border-emerald-200/70 text-emerald-800 px-4 py-3 mb-4 text-sm">
                 {{ session('success') }}
             </div>
         @endif
@@ -71,6 +71,5 @@
         @yield('content')
     </main>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 </html>

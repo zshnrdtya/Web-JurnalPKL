@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="bg-white rounded-xl shadow-sm border p-5 max-w-lg mx-auto">
+<div class="glass-panel max-w-lg mx-auto">
     <h2 class="text-lg font-semibold mb-4 text-gray-800">Edit Kegiatan</h2>
 
     <form action="{{ route('kegiatan.update', $kegiatan) }}" method="POST" class="space-y-4">
@@ -45,8 +45,8 @@
         </div>
 
         <div class="flex gap-2 pt-2">
-            <button type="submit" class="flex-1 bg-blue-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-blue-700">Simpan Perubahan</button>
-            <a href="{{ route('kegiatan.index') }}" class="flex-1 text-center bg-gray-100 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-200">Batal</a>
+            <button type="submit" class="btn-primary flex-1 text-white py-2.5 rounded-lg text-sm font-medium">Simpan Perubahan</button>
+            <a href="{{ route('kegiatan.index') }}" class="btn-secondary flex-1 text-center text-gray-700 py-2.5 rounded-lg text-sm font-medium">Batal</a>
         </div>
     </form>
 </div>
